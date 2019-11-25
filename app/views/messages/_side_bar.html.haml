@@ -2,17 +2,29 @@
   .side-header
     .side-header__box
       %p.side-header__box__user-name
-        omatsu
+        = current_user.name
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group
-          %a{}
+          %a{:href => "/groups/new"}
             %i.fa.fa-edit
         %li.side-header__box__menu__edit-user
-          %a{}
+          %a{:href => "/users/#{current_user.id}/edit"}
             %i.fa.fa-cog
   .groups
     %a{}
     .group
       %p.group__group-name グループ名
       %p.group__message 新着メッセージ
+
+-# .side-bar
+-#   .header
+-#     %h3.header__name
+-#       ユーザーネーム
+-#     %ul.header__lists
+-#       %li.list
+-#         = link_to do
+-#           = fa_icon 'edit', class: 'icon'
+-#       %li.list
+-#         = link_to edit_user_path(current_user) do
+-#           = fa_icon 'cog', class: 'icon'
       
