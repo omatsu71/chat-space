@@ -1,25 +1,18 @@
-.messages
-  = render @messages
-
 .chat-main
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group
-        sabu
+        = @group.name
       %ul.main-header__left-box__member-list
         Member :
-        %li.main-header__left-box__member-list__member ネス
+        - @group.users.each do |user|
+          = user.name
+        %li.main-header__left-box__member-list__member 
     %a{}
-      .main-header__edit-btn Edit
+      .main-header__edit-btn
+        = link_to "Edit", edit_group_path(@group)
   .messages
-    .message{}
-      .message__upper-info
-        %p.message__upper-info__talker
-          
-        %p.message__upper-info__date 
-          
-      %p.message__text
-
+    = render @messages
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
