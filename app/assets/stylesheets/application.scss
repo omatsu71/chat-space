@@ -1,11 +1,12 @@
-
-@import "./reset";
-// @import "./messages";
-@import "./side";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
-@import "./main";
+@import "config/reset";
+@import "config/colors";
+@import "config/font-size";
+@import "mixins/vendor_prefix";
+@import "modules/side";
+@import "modules/main";
+@import "messages/messages.scss";
 @import "user";
-@import "colors";
 @import "flash";
 @import "group";
