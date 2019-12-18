@@ -6,7 +6,7 @@
 @import "mixins/vendor_prefix";
 @import "modules/side";
 @import "modules/main";
+@import "modules/user";
 @import "messages/messages.scss";
-@import "user";
-@import "flash";
+@import "modules/flash";
 @import "group";
