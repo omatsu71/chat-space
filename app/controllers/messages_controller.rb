@@ -29,7 +29,7 @@ class MessagesController < ApplicationController
 
   def set_group
     @group = Group.find(params[:group_id])
-    @groups = current_user.groups
+    # @groups = current_user.groups
   end
 
   # def set_messages
