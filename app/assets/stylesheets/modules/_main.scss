@@ -1,6 +1,6 @@
 .chat {
   width: calc(100% - 300px);
-  
+  float: right;
   .header {
     box-sizing: border-box;
     height: 100px;
@@ -24,8 +24,8 @@
       }
     }
     .right-header {
-      border: 1px solid $light_blue;
       color: $light_blue;
+      border: 1px solid $light_blue;
       float: right;
       height: 40px;
       line-height: 40px;
@@ -38,7 +38,8 @@
     background-color: #FAFAFA;
     box-sizing: border-box;
     padding: 46px 40px;
-    height: calc(100% - 190px);
+    height: calc(100vh - 190px);
+    overflow: scroll;
     .message {
       .upper-message {
         display: flex;
