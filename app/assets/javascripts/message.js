@@ -55,10 +55,12 @@ $('#new_message').on('submit', function(e){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-      $('.form__submit').prop('disabled', false);
     })
      .fail(function(){
       alert('error');
-     });
+    })
+     .always(function(){
+      $('.form__submit').prop('disabled', false);
+    })
   });
 });
